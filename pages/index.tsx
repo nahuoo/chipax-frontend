@@ -1,7 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
-import {Hero} from '../components/Hero'
+import { Hero } from '../components/Hero'
+import { Intro } from '../components/Intro'
 
 const Home: NextPage = () => {
   return (
@@ -12,8 +13,8 @@ const Home: NextPage = () => {
       </Head>
 
       <main>
+        <Intro />
         <Hero />
-        
       </main>
 
       <footer className="flex h-24 w-full items-center justify-center border-t">
