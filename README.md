@@ -1,23 +1,63 @@
-# Next.js + Tailwind CSS Example
 
-This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+# Chipax-Challenge/Frontend 🔬
 
-## Deploy your own
+API desarrollado para el desafio Chipax => https://www.notion.so/Rick-and-Morty-Challenge-84a1b794dc09429fb3178c2a24e7c217
+![Logo](https://c4.wallpaperflare.com/wallpaper/347/251/683/rick-and-morty-oh-mama-run-the-jewels-wallpaper-preview.jpg)
+## Demo 😃
 
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example) or preview live with [StackBlitz](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
+[Demo-Heroku](https://chipax-backend-demo.herokuapp.com/)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
 
-## How to use
+## Dependecias 📃
 
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+**Client:** [NextJS](https://nextjs.org/) framework
+
+[GSAP](https://greensock.com/), [Prettier](https://prettier.io/), [eslint](https://eslint.org/)
+
+
+## API Referencias 👀
+
+####  Char counter
+
+```http
+   /char-counter
+```
+    - cuántas veces aparece la letra "l" (case insensitive) en los nombres de todos los `location`
+    - cuántas veces aparece la letra "e" (case insensitive) en los nombres de todos los `episode`
+    - cuántas veces aparece la letra "c" (case insensitive) en los nombres de todos los `character`
+    - cuánto tardó el programa 👆 en total (desde inicio ejecución hasta entrega de resultados)
+#### Episode locations
+
+```http
+  /episodes-locations
+```
+    - para cada `episode`, indicar la cantidad y un listado con las `location` (`origin`) de todos los `character` que aparecieron en ese `episode` (sin repetir)
+    - cuánto tardó el programa 👆 en total (desde inicio ejecución hasta entrega de resultados)
+
+
+## Install
+
+Requiere [Node](http://nodejs.org) 
+
+Clonar el repositorio
 
 ```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-# or
-pnpm create next-app --example with-tailwindcss with-tailwindcss-app
+  git clone https://github.com/nahuoo/chipax-frontend.git
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Instalar 💾
+
+```bash
+  npm install
+```
+
+Correr en local
+
+```bash
+ npm run start
+  
+ # modo watch
+ npm run dev
+ # modo produccion
+ npm build
+```
