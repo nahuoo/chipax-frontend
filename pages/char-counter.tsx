@@ -1,4 +1,5 @@
 import type { NextPage } from 'next'
+import Link from 'next/link'
 import { useEffect } from 'react'
 import { CharCounterCard } from '../components/ui/CharCounterCard'
 import { CharCounterTitle } from '../components/ui/CharCounterTitle'
@@ -27,6 +28,11 @@ const charCounterHome: NextPage = ({ data }: any) => {
   return (
     <div className="h-[85vh]">
       <section className="w-full pt-10 lg:pt-[80px] overflow-hidden">
+        <Link href="/">
+          <a className="m-4 p-2 text-lg hover:border-b-4 transition duration-200 hover:ease-in">
+            ←Home
+          </a>
+        </Link>
         <CharCounterTitle />
         <div className="flex justify-center flex-wrap">
           {data.results.map((result: any) => (
