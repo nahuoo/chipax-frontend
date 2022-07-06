@@ -1,22 +1,10 @@
 import { useEffect } from 'react'
-import gsap from 'gsap'
 import Image from 'next/image'
+import { introAnimation } from '../utils/introAnimation'
 
 export const Intro = () => {
   useEffect(() => {
-    let tl = gsap.timeline({
-      defaults: {
-        ease: 'none',
-        duration: 1.3,
-      },
-    })
-    tl.fromTo(
-      '.hr',
-      { width: '10px', left: '50%' },
-      { width: '100vw', left: '0%', opacity: 0 }
-    )
-    tl.to('.box1', { y: '-100%', ease: 'expo.inOut' })
-    tl.to('.box2', { y: '100%', ease: 'expo.inOut' }, '<')
+   introAnimation()
   }, [])
 
   return (
