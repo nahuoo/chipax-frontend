@@ -10,7 +10,6 @@ const Home: NextPage = () => {
         <title>Chipax Challenge</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
       <main>
         <Intro />
         <Hero />
