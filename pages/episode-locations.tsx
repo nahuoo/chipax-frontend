@@ -1,14 +1,14 @@
 import type { NextPage } from 'next'
 import Link from 'next/link'
 import { useEffect } from 'react'
-import { CharCounterCard } from '../components/ui/CharCounterCard'
-import { CharCounterTitle } from '../components/ui/CharCounterTitle'
-import { charCounterAnimation } from '../utils/charCounterAnimation'
+import { EpisodeLocationsCard } from '../components/ui/EpisodeLocationsCard'
+import { EpisodeLocationsTitle } from '../components/ui/EpisodeLocationsTitle'
+import { episodeLocationsAnimation } from '../utils/episodeLocationsAnimation'
 
 export async function getServerSideProps() {
   try {
     const res = await fetch(
-      'https://chipax-backend-demo.herokuapp.com/api/char-counter'
+      'https://chipax-backend-demo.herokuapp.com/api/episodes-locations'
     )
     const data = await res.json()
     return {
@@ -21,33 +21,33 @@ export async function getServerSideProps() {
   }
 }
 
-const charCounterHome: NextPage = ({ data }: any) => {
+const EpisodeLocationsHome: NextPage = ({ data }: any) => {
   useEffect(() => {
-    charCounterAnimation()
+    episodeLocationsAnimation()
   }, [])
   return (
-    <div className="h-[85vh]">
+    <div>
       <section className="w-full pt-10 lg:pt-[80px] overflow-hidden">
         <Link href="/">
           <a className="m-4 p-2 text-lg hover:border-b-4 transition duration-200 hover:ease-in">
             ←Home
           </a>
         </Link>
-        <CharCounterTitle />
+        <EpisodeLocationsTitle />
+        <div className="text-center">El programa tardó {data.time}</div>
         <div className="flex justify-center flex-wrap">
           {data.results.map((result: any) => (
-            <CharCounterCard
-              key={result.char}
-              title={result.count}
-              subtitle={result.char}
-              text={result.resource}
+            <EpisodeLocationsCard
+              key={result.name}
+              title={result.name}
+              subtitle={result.episode}
+              location={result.location}
             />
           ))}
-          El programa tardó {data.time}
         </div>
         <div></div>
       </section>
     </div>
   )
 }
-export default charCounterHome
+export default EpisodeLocationsHome
