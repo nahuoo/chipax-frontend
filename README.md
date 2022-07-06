@@ -5,7 +5,7 @@ API desarrollado para el desafio Chipax => https://www.notion.so/Rick-and-Morty-
 ![Logo](https://c4.wallpaperflare.com/wallpaper/347/251/683/rick-and-morty-oh-mama-run-the-jewels-wallpaper-preview.jpg)
 ## Demo 😃
 
-[Demo-Heroku](https://chipax-backend-demo.herokuapp.com/)
+[Demo-Vercel](https://chipax-frontend.vercel.app/)
 
 
 ## Dependecias 📃
@@ -15,7 +15,7 @@ API desarrollado para el desafio Chipax => https://www.notion.so/Rick-and-Morty-
 [GSAP](https://greensock.com/), [Prettier](https://prettier.io/), [eslint](https://eslint.org/)
 
 
-## API Referencias 👀
+## Pages 👀
 
 ####  Char counter
 
